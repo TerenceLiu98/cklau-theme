@@ -1,9 +1,8 @@
 <footer class="footer">
-<center>
   <p>&copy; {{ now.Year }} <a href="{{ `` | absURL }}">{{ site.Title }}</a> &nbsp;
-    <a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备2022102668号</a>
+    {{ if .Site.Params.beian }}
+        <span><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">{{ .Site.Params.beian }}</a></span>
 ️  </p>
-</center>
 </footer>
 
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
