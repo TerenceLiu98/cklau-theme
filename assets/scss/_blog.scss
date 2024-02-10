@@ -27,25 +27,29 @@
     height: auto;
     overflow-y: auto;
 
-    ul {
-      padding-left: 0;
-      list-style: none;
+    details {
+      padding: 0px;
+      border: 1.5px dashed $gray-600;
+      border-radius: 20px;
     }
 
-    li {
-      margin-top: 0.375rem;
-      padding-top: 0.375rem;
+    details summary {
+        cursor: zoom-in;
+        margin-inline-start: 20px;
     }
 
-    li ul li {
-      border-top: none;
-      padding-left: 3rem;
-      margin-top: 0.125rem;
-      padding-top: 0.125rem;
+    details[open] summary {
+        cursor: zoom-out;
     }
 
-    li:not(:first-child) {
-      border-top: 1px dashed $gray-200;
+    .details {
+        display: inline;
+        font-weight: 500;
+    }
+
+    .inner {
+        margin: 0 20px;
+        padding: 10px 20px;
     }
 
     a {
@@ -165,25 +169,3 @@ body {
         background-color: var(--theme-color-light);
     }
 }
-
-details {
-  border: 1px solid #aaa;
-  border-radius: 4px;
-  padding: 0.5em 0.5em 0;
-}
-
-summary {
-  font-weight: bold;
-  margin: -0.5em -0.5em 0;
-  padding: 0.5em;
-}
-
-details[open] {
-  padding: 0.5em;
-}
-
-details[open] summary {
-  border-bottom: 1px solid #aaa;
-  margin-bottom: 0.5em;
-}
-
