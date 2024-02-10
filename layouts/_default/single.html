@@ -26,12 +26,16 @@
     {{ end }}
   </div>
   {{ end }}
+  {{ if .Params.extramaterials }}
+    {{ partial "blog/info.html" . }}
+  {{ end }}
+  
+  {{ partial "blog/series.html" . }}
 
-  {{ partial "blog/info.html" . }}
   {{ if .Params.comment }}
     {{ partial "common/utteranc.html" . }}
     {{ partial "common/giscus.html" . }}
   {{ end }}
-  {{ partial "blog/series.html" . }}
+
 </article>
 {{ end }}
