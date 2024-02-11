@@ -100,7 +100,6 @@
 
 /* * Margin notes/sidenotes */
 .sidenote {
-    font-family: sans-serif;
     font-size: 80%;        /* slightly smaller font for sidenote content */
     font-weight: normal;
     color: var(--theme-hl1-color);
@@ -156,7 +155,6 @@ body {
 .sidenote-number::after {
     content: counter(sidenote-counter);
     vertical-align: super;
-    font-family: sans-serif;
     font-size: 0.7em;
     font-weight: bold;
     color: var(--theme-body-color);
